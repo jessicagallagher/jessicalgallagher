@@ -14,7 +14,7 @@ export default function TwinklingStars() {
   const stars = generateStars(350);
 
   return (
-    <div className='relative w-full h-screen bg-black overflow-hidden -z-50' >
+    <div className='absolute w-full h-screen bg-black overflow-hidden -z-50' >
       {stars.map((star) => (
         <div
           key={star.id}
