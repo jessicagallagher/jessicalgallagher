@@ -11,7 +11,7 @@ export default function RootLayout({ children }) {
     <html lang='en'>
       <body>
         <NoRightClick>
-          <TwinklingStars>{children}</TwinklingStars>
+          {children}
         </NoRightClick>
       </body>
     </html>
