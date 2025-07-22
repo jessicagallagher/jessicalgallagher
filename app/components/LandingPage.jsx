@@ -3,11 +3,11 @@ import Link from 'next/link';
 
 export default function LandingPage() {
   return (
-    <div className='relative h-screen'>
-      <div className='absolute top-1/2 transform -translate-1/2 translate-x-1/2'>
+    <div className='h-screen'>
+      <div className='flex flex-col px-10 relative top-1/3 right-1/2 transform translate-x-1/2'>
         <div className='mx-auto flex justify-center flex-row items-center'>
           <div>
-            <h2 className='text-4xl font-semibold tracking-tight text-pretty sm:text-5xl'>
+            <h2 className='text-4xl lg:text-5xl font-semibold tracking-tight text-pretty'>
               Jessica Gallagher
             </h2>
             <p className='text-2xl mt-6'>Full Stack Software Engineer</p>
