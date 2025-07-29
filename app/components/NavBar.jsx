@@ -63,7 +63,8 @@ export default function NavBar() {
               </Link>
             </div>
           </Disclosure.Panel>
-          <div className='hidden md:ml-6 md:flex md:space-x-3 md:justify-end lg:space-x-6 xl:space-x-8 md:px-3 lg:px-6 xl:px-8'>
+          {/* regular menu */}
+          <div className='hidden md:ml-6 md:flex md:space-x-3 lg:space-x-6 xl:space-x-8 '>
             <ul className='hidden md:ml-6 md:flex md:space-x-3 lg:space-x-6 xl:space-x-8'>
               <Link
                 className={`${
