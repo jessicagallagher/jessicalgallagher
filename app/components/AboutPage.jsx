@@ -8,8 +8,8 @@ export default function AboutPage() {
       <div className='h-screen max-w-full'>
         <NavBar />
         <AboutHero />
-        <div className='h-full max-w-full mx-auto lg:px-10'>
-          <h3 className='text-xl text-justify'>
+        <div className='h-full max-w-full mx-auto px-2 lg:px-10'>
+          <h3 className='text-lg lg:text-xl text-justify'>
             I'm a Brooklyn, New York-based full stack software engineer with a
             passion for creating user-friendly, engaging, and intuitive
             experiences. I enjoy building websites and web applications that
@@ -18,7 +18,7 @@ export default function AboutPage() {
             write clean and easy to maintain code.
           </h3>
           <br />
-          <h3 className='text-xl text-justify'>
+          <h3 className='text-lg lg:text-xl text-justify'>
             But... I don't just write code all day! I also enjoy reading,
             playing music on the piano, guitar, bass guitar, flute, and piccolo,
             cooking, hanging out with my two cats, Wiz and Max, and running. I'm
@@ -27,10 +27,12 @@ export default function AboutPage() {
             best of four naps in one day. As a curious lifetime-learner, I'm
             currently perfecting my Italian.
           </h3>
-          <div className='grid grid-cols-2 mt-10'>
+          <div className='flex flex-col justify-center lg:grid lg:grid-cols-2 mt-10'>
             <div>
-              <h3 className='text-xl'>Marathons I've run:</h3>
-              <ul className='text-lg list-outside pl-4 list-disc'>
+              <h3 className='text-lg lg:text-xl text-center lg:text-left'>
+                Marathons I've run:
+              </h3>
+              <ul className='text-base lg:text-lg list-outside pl-4 list-disc'>
                 <li>New York City Marathon (New York, New York)</li>
                 <li>Big Sur Marathon (Big Sur, California)</li>
                 <li>Berlin Marathon (Berlin, Germany)</li>
@@ -41,8 +43,10 @@ export default function AboutPage() {
               </ul>
             </div>
             <div>
-              <h3 className='text-xl'>Books I've read this year:</h3>
-              <ul className='text-lg list-outside list-disc pl-4'>
+              <h3 className='text-lg lg:text-xl text-center lg:text-left mt-10 lg:mt-0'>
+                Books I've read this year:
+              </h3>
+              <ul className='text-base lg:text-lg list-outside pl-4 list-disc'>
                 <li>
                   <span className='italic'>Crime and Punishment</span> by Fyodor
                   Dostoyevsky, Translated by Richard Pevear + Larissa
@@ -84,7 +88,7 @@ export default function AboutPage() {
               alt='image of a tabby cat and black cat'
               className='mx-auto lg:rounded-md border border-white border-2'
             />
-            <p className='text-lg text-center pb-8 mt-2'>
+            <p className='text-base lg:text-lg text-center pb-8 mt-2'>
               Max (left) + Wiz Khatlifa (right)
             </p>
           </div>
