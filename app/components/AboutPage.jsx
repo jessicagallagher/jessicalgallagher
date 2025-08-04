@@ -7,7 +7,7 @@ export default function AboutPage() {
     <>
       <div className='h-screen max-w-full'>
         <NavBar />
-          <Typewriter text='Hello world' delay={100} />
+          <Typewriter text='Hello, world!' delay={100} />
         <div className='h-full max-w-full mx-auto px-2 lg:px-10'>
           <h3 className='text-lg lg:text-xl text-justify'>
             I'm a Brooklyn, New York-based full stack software engineer with a

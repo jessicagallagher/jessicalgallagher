@@ -1,5 +1,6 @@
 'use client';
 import { useState, useEffect } from 'react';
+import { BlinkingCursor } from '.';
 
 export default function Typewriter({ text, delay }) {
   const [currentText, setCurrentText] = useState('');
@@ -16,5 +17,5 @@ export default function Typewriter({ text, delay }) {
     }
   }, [currentIndex, delay, text]);
 
-  return <h1 className='p-2 lg:p-10 text-6xl'>{currentText}</h1>;
+  return <h1 className='font-roboto p-2 lg:p-10 text-6xl'>{currentText}<span><BlinkingCursor /></span></h1>;
 }
