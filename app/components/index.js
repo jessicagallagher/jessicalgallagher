@@ -6,6 +6,7 @@ import NavBar from './NavBar';
 import NoRightClick from './NoRightClick';
 import PortfolioPage from './PortfolioPage';
 import TwinklingStars from './TwinklingStars';
+import Typewriter from './Typewriter';
 
 export {
   AboutHero,
@@ -16,4 +17,5 @@ export {
   NoRightClick,
   PortfolioPage,
   TwinklingStars,
+  Typewriter
 }
