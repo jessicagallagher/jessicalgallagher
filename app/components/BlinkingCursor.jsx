@@ -6,11 +6,11 @@ export default function BlinkingCursor() {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setVisible(prev => !prev);
+      setVisible((prev) => !prev);
     }, 500);
 
-    return () => clearInterval(interval)
-  })
+    return () => clearInterval(interval);
+  });
 
   return (
     <span
