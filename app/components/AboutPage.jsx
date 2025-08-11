@@ -1,5 +1,4 @@
 'use client';
-import Image from 'next/image';
 import { NavBar, Typewriter } from '.';
 
 export default function AboutPage() {
@@ -21,7 +20,7 @@ export default function AboutPage() {
           <h3 className='text-lg lg:text-xl text-justify'>
             But... I don't just write code all day! I also enjoy reading,
             playing music on the piano, guitar, bass guitar, flute, and piccolo,
-            cooking, hanging out with my two cats, Wiz and Max, and running. I'm
+            cooking, hanging out with my two cats, Wiz Khatlifa and Max, and running. I'm
             a 7x marathoner and am looking forward to challenging myself to run
             ultra-marathons soon. I'm also a semi-pro napper, with a personal
             best of four naps in one day. As a curious lifetime-learner, I'm
@@ -79,18 +78,6 @@ export default function AboutPage() {
                 </li>
               </ul>
             </div>
-          </div>
-          <div className='py-10'>
-            <Image
-              src='/images/wiz-max.jpg'
-              width={'300'}
-              height={'300'}
-              alt='image of a tabby cat and black cat'
-              className='mx-auto lg:rounded-md border border-white border-2'
-            />
-            <p className='text-base lg:text-lg text-center pb-8 mt-2'>
-              Max (left) + Wiz Khatlifa (right)
-            </p>
           </div>
         </div>
       </div>
