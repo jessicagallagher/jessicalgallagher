@@ -1,4 +1,3 @@
-import AboutHero from './AboutHero';
 import AboutPage from './AboutPage';
 import BlinkingCursor from './BlinkingCursor';
 import FluidCursor from './FluidCursor';
@@ -10,7 +9,6 @@ import TwinklingStars from './TwinklingStars';
 import Typewriter from './Typewriter';
 
 export {
-  AboutHero,
   AboutPage,
   BlinkingCursor,
   FluidCursor,
