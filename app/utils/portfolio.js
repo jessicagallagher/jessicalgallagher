@@ -2,7 +2,7 @@ export const projects = [
   {
     name: 'Tech Meowt',
     imgUrl: '/images/portfolio_images/tech-meowt.png',
-    techUsed: 'Next.js, Tailwind CSS, Resend, + Setmore',
+    techUsed: 'Next.js, Tailwind CSS, + Resend',
     link: 'https://www.techmeowt.com',
     comments: 'This website was built and is maintained for Tech Meowt.',
   },
