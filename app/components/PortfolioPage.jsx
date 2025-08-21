@@ -8,7 +8,7 @@ export default function PortfolioPage() {
       <div className='h-screen max-w-full'>
         <NavBar />
         <Typewriter text='Portfolio' delay={100} />
-        <div className='h-full max-w-full mx-auto px-2 lg:px-10'>
+        <div className='h-full max-w-full mx-auto px-2 lg:px-10 my-10'>
           <ul role='list' className='flex flex-col space-y-12 justify-center'>
             {projects.map((project) => (
               <li key={project.name}>

@@ -1,5 +1,6 @@
 import AboutPage from './AboutPage';
 import BlinkingCursor from './BlinkingCursor';
+import ContactForm from './ContactForm';
 import ContactPage from './ContactPage';
 import FluidCursor from './FluidCursor';
 import LandingPage from './LandingPage';
@@ -12,6 +13,7 @@ import Typewriter from './Typewriter';
 export {
   AboutPage,
   BlinkingCursor,
+  ContactForm,
   ContactPage,
   FluidCursor,
   LandingPage,

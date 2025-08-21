@@ -1,4 +1,5 @@
-import { NavBar, Typewriter } from '.'
+'use client'
+import { ContactForm, NavBar, Typewriter } from '.'
 
 export default function ContactPage() {
   return (
@@ -6,6 +7,7 @@ export default function ContactPage() {
       <div className='h-screen w-full'>
         <NavBar />
         <Typewriter text='Contact' delay={100} />
+        <ContactForm />
       </div>
     </>
   );

@@ -50,12 +50,12 @@ export default function LandingPage() {
               About
             </button>
           </Link>
-          <Link href='/'>
+          <Link href='/portfolio'>
             <button className='w-[125] border border-white px-6 py-2 rounded-4xl text-xl hover:bg-white hover:text-black hover:cursor-pointer'>
               Portfolio
             </button>
           </Link>
-          <Link href='/'>
+          <Link href='/contact'>
             <button className='w-[125] border border-white px-6 py-2 rounded-4xl text-xl hover:bg-white hover:text-black hover:cursor-pointer'>
               Contact
             </button>
