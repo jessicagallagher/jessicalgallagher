@@ -206,7 +206,7 @@ export default function ContactForm() {
               onChange={handleRecaptchaChange}
               onExpired={handleRecaptchaExpired}
               onError={handleRecaptchaError}
-              theme='light' // or "light"
+              theme='dark' // or "light"
               size='normal' // or "compact"
             />
           </div>
