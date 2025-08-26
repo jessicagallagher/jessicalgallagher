@@ -227,14 +227,14 @@ export default function ContactForm() {
             <div>
               <button
                 disabled
-                className='cursor-not-allowed inline-flex justify-center rounded-md border py-3 px-6 text-base font-semibold shadow-xl text-white border-white bg-black hover:bg-white hover:text-black hover:border-none rounded-3xl'
+                className='cursor-not-allowed inline-flex justify-center rounded-md border py-3 px-6 text-base font-semibold shadow-xl text-white border-white bg-black rounded-3xl'
               >
                 Thanks!
               </button>
             </div>
           )}
         </form>
-        <ToastContainer />
+        <ToastContainer position='bottom-center'theme='colored'/>
       </div>
     </div>
   );
