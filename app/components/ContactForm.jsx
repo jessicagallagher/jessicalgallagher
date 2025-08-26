@@ -214,7 +214,7 @@ export default function ContactForm() {
             <div>
               <button
                 type='submit'
-                className='cursor-pointer inline-flex justify-center rounded-md border py-3 px-6 text-base font-semibold shadow-xl bg-white text-black hover:border-white hover:bg-black hover:text-white rounded-3xl'
+                className='cursor-pointer inline-flex justify-center rounded-md border py-3 px-6 text-base font-semibold shadow-xl border-white bg-black text-white hover:border-black hover:bg-white hover:text-black rounded-3xl'
               >
                 Submit
               </button>
@@ -224,7 +224,7 @@ export default function ContactForm() {
             <div>
               <button
                 disabled
-                className='cursor-not-allowed inline-flex justify-center rounded-md border py-3 px-6 text-base font-semibold shadow-xl text-white hover:bg-white hover:text-black hover:border-black rounded-3xl'
+                className='cursor-not-allowed inline-flex justify-center rounded-md border py-3 px-6 text-base font-semibold shadow-xl text-white border-white bg-black hover:bg-white hover:text-black hover:border-none rounded-3xl'
               >
                 Thanks!
               </button>
