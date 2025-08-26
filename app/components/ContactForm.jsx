@@ -1,7 +1,9 @@
 'use client';
-import { useState } from 'react';
+import { useState, useRef } from 'react';
+import ReCAPTCHA from 'react-google-recaptcha';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { verifyRecaptcha } from '../actions/recaptcha/verify-recaptcha';
 
 const initialState = {
   firstName: '',
@@ -15,13 +17,79 @@ export default function ContactForm() {
   const [clicked, setClicked] = useState(false);
   const [values, setValues] = useState(initialState);
   const [phone, setPhone] = useState('');
+  const [recaptchaToken, setRecaptchaToken] = useState(null);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [message, setMessage] = useState('');
+  const recaptchaRef = useRef(null);
+
+  const handleRecaptchaChange = (token) => {
+    setRecaptchaToken(token);
+    // clear any existing error messages
+    setMessage('');
+  };
+
+  const handleRecaptchaExpired = () => {
+    setRecaptchaToken(null);
+    setMessage('reCAPTCHA expired. Please verify again.');
+  };
+
+  const handleRecaptchaError = () => {
+    setRecaptchaToken(null);
+    setMessage('reCAPTCHA error. Please try again.');
+  };
 
   const handleSubmit = async (formData) => {
-    console.log(`Success: ${formData}`);
+    setIsSubmitting(true);
+    setMessage('');
+    // validate rc
+    if (!recaptchaToken) {
+      setMessage('Please complete the reCAPTCHA verification');
+      setIsSubmitting(false);
+      return;
+    }
 
-    setClicked(true);
-    setValues(initialState);
-    setPhone('');
+    try {
+      // verify rc token
+      const verification = await verifyRecaptcha(recaptchaToken);
+      if (!verification.success) {
+        const errorMessages = {
+          'missing-input-secret': 'Server configuration error',
+          'invalid-input-secret': 'Server configuration error',
+          'missing-input-response': 'Please complete the reCAPTCHA',
+          'invalid-input-response': 'Invalid reCAPTCHA response',
+          'bad-request': 'Bad request',
+          'timeout-or-duplicate': 'reCAPTCHA expired or already used',
+        };
+
+        const errorCode = verification.errorCodes[0];
+        const errorMessage =
+          errorMessages[errorCode] || 'reCAPTCHA verification failed';
+        setMessage(errorMessage);
+        setIsSubmitting(false);
+        return;
+      }
+
+      // process form submission
+      console.log(`Form data submitted successfully: ${values}`);
+      console.log(`ReCAPTCHA verified successfully`);
+
+      // api call
+      await new Promise((resolve) => setTimeout(resolve, 1000));
+
+      setMessage('Form submitted successfully!');
+      setClicked(true);
+      setValues(initialState);
+      setPhone('');
+      setRecaptchaToken(null);
+      if (recaptchaRef.current) {
+        recaptchaRef.current.reset();
+      }
+    } catch (error) {
+      console.error('Submission error:', error);
+      setMessage('An error occurred while submitting the form');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   // format phone number
@@ -48,7 +116,7 @@ export default function ContactForm() {
       <h2 className='text-3xl lg:text-5xl tracking-tight text-pretty text-center my-10'>
         👋 Get in touch
       </h2>
-      <div className='mx-auto max-w-2/3 lg:max-w-1/2'>
+      <div className='mx-auto max-w-2/3 lg:max-w-1/2 pb-12'>
         <form
           action={handleSubmit}
           className='grid grid-cols-1 gap-y-6 text-black'
@@ -132,11 +200,22 @@ export default function ContactForm() {
               value={values.message}
             />
           </div>
+          <div className='flex justify-start'>
+            <ReCAPTCHA
+              ref={recaptchaRef}
+              sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}
+              onChange={handleRecaptchaChange}
+              onExpired={handleRecaptchaExpired}
+              onError={handleRecaptchaError}
+              theme='dark' // or "light"
+              size='normal' // or "compact"
+            />
+          </div>
           {!clicked && (
             <div>
               <button
                 type='submit'
-                className='cursor-pointer inline-flex justify-center rounded-md border py-3 px-6 text-base font-semibold shadow-xl hover:bg-white hover:text-black hover:border-black rounded-3xl'
+                className='cursor-pointer inline-flex justify-center rounded-md border py-3 px-6 text-base font-semibold shadow-xl bg-white text-black hover:border-white hover:bg-black hover:text-white rounded-3xl'
               >
                 Submit
               </button>
