@@ -62,8 +62,7 @@ export default function ContactForm() {
         };
 
         const errorCode = verification.errorCodes[0];
-        const errorMessage =
-          errorMessages[errorCode] || 'reCAPTCHA verification failed';
+        const errorMessage = errorMessages[errorCode] || 'reCAPTCHA verification failed';
         setMessage(errorMessage);
         setIsSubmitting(false);
         return;
@@ -119,7 +118,7 @@ export default function ContactForm() {
       <div className='mx-auto max-w-2/3 lg:max-w-1/2 pb-12'>
         <form
           action={handleSubmit}
-          className='grid grid-cols-1 gap-y-6 text-black'
+          className='grid grid-cols-1 gap-y-6 text-white'
         >
           <div>
             <label htmlFor='firstName' className='sr-only'>
@@ -200,7 +199,7 @@ export default function ContactForm() {
               value={values.message}
             />
           </div>
-          <div className='flex justify-start'>
+          <div className={`${ !clicked ? 'flex justify-start' : 'hidden' }`}>
             <ReCAPTCHA
               ref={recaptchaRef}
               sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}
