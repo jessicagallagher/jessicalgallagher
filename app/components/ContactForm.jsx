@@ -4,6 +4,7 @@ import ReCAPTCHA from 'react-google-recaptcha';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { verifyRecaptcha } from '../actions/recaptcha/verify-recaptcha';
+import { sendEmail } from '../actions/resend/actions';
 
 const initialState = {
   firstName: '',
@@ -73,8 +74,13 @@ export default function ContactForm() {
       }
 
       // process form submission
-      toast.success(`Form submitted successfully!`);
-
+      const result = await sendEmail(formData);
+      if (result.success) {
+        toast.success(`Form submitted successfully!`);
+      } else {
+        toast.error('An error occurred while submitting the form');
+      }
+      
       // api call
       await new Promise((resolve) => setTimeout(resolve, 1000));
 
