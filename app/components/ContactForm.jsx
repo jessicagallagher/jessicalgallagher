@@ -31,11 +31,13 @@ export default function ContactForm() {
   const handleRecaptchaExpired = () => {
     setRecaptchaToken(null);
     setMessage('reCAPTCHA expired. Please verify again.');
+    toast.error('reCAPTCHA expired. Please verify again.');
   };
 
   const handleRecaptchaError = () => {
     setRecaptchaToken(null);
     setMessage('reCAPTCHA error. Please try again.');
+    toast.error('reCAPTCHA error. Please try again.');
   };
 
   const handleSubmit = async (formData) => {
@@ -44,6 +46,7 @@ export default function ContactForm() {
     // validate rc
     if (!recaptchaToken) {
       setMessage('Please complete the reCAPTCHA verification');
+      toast.error('Please complete the reCAPTCHA verification');
       setIsSubmitting(false);
       return;
     }
@@ -62,15 +65,15 @@ export default function ContactForm() {
         };
 
         const errorCode = verification.errorCodes[0];
-        const errorMessage = errorMessages[errorCode] || 'reCAPTCHA verification failed';
+        const errorMessage =
+          errorMessages[errorCode] || 'reCAPTCHA verification failed';
         setMessage(errorMessage);
         setIsSubmitting(false);
         return;
       }
 
       // process form submission
-      console.log(`Form data submitted successfully: ${values}`);
-      console.log(`ReCAPTCHA verified successfully`);
+      toast.success(`Form submitted successfully!`);
 
       // api call
       await new Promise((resolve) => setTimeout(resolve, 1000));
@@ -84,7 +87,7 @@ export default function ContactForm() {
         recaptchaRef.current.reset();
       }
     } catch (error) {
-      console.error('Submission error:', error);
+      toast.error('An error occurred while submitting the form');
       setMessage('An error occurred while submitting the form');
     } finally {
       setIsSubmitting(false);
@@ -199,7 +202,7 @@ export default function ContactForm() {
               value={values.message}
             />
           </div>
-          <div className={`${ !clicked ? 'flex justify-start' : 'hidden' }`}>
+          <div className={`${!clicked ? 'flex justify-start' : 'hidden'}`}>
             <ReCAPTCHA
               ref={recaptchaRef}
               sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}
