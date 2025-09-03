@@ -229,7 +229,7 @@ export default function ContactForm() {
             <div>
               <button
                 disabled
-                className='w-[125] text-xl cursor-not-allowed inline-flex justify-center rounded-md border py-2 px-6 text-base font-semibold shadow-xl text-white border-white bg-black rounded-4xl'
+                className='w-[125] text-xl cursor-not-allowed inline-flex justify-center border py-2 px-6 text-base font-semibold shadow-xl text-white border-white bg-black rounded-4xl'
               >
                 Thanks!
               </button>
