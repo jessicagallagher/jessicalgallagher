@@ -4,6 +4,7 @@ import ContactForm from './ContactForm';
 import ContactPage from './ContactPage';
 import FluidCursor from './FluidCursor';
 import LandingPage from './LandingPage';
+import Loading from './Loading';
 import NavBar from './NavBar';
 import NoRightClick from './NoRightClick';
 import PortfolioPage from './PortfolioPage';
@@ -17,6 +18,7 @@ export {
   ContactPage,
   FluidCursor,
   LandingPage,
+  Loading,
   NavBar,
   NoRightClick,
   PortfolioPage,
