@@ -5,6 +5,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { verifyRecaptcha } from '../actions/recaptcha/verify-recaptcha';
 import { sendEmail } from '../actions/resend/actions';
+import { Button } from '.';
 
 const initialState = {
   firstName: '',
@@ -221,19 +222,14 @@ export default function ContactForm() {
           </div>
           {!clicked && (
             <div>
-              <button
-                type='submit'
-                className='cursor-pointer inline-flex justify-center rounded-md border py-3 px-6 text-base font-semibold shadow-xl border-white bg-black text-white hover:border-black hover:bg-white hover:text-black rounded-3xl'
-              >
-                Submit
-              </button>
+              <Button buttonText={`Submit`} type={`submit`}/>
             </div>
           )}
           {clicked && (
             <div>
               <button
                 disabled
-                className='cursor-not-allowed inline-flex justify-center rounded-md border py-3 px-6 text-base font-semibold shadow-xl text-white border-white bg-black rounded-3xl'
+                className='w-[125] text-xl cursor-not-allowed inline-flex justify-center rounded-md border py-2 px-6 text-base font-semibold shadow-xl text-white border-white bg-black rounded-4xl'
               >
                 Thanks!
               </button>
