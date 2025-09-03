@@ -2,8 +2,8 @@ import './globals.css';
 import { TwinklingStars, NoRightClick } from './components';
 
 export const metadata = {
-  title: 'Jessica Gallagher | Software Engineer',
-  applicationName: `Jessica Gallagher's Personal Portfolio`,
+  title: `Jessica Gallagher's Personal Portfolio`,
+  name: `Jessica Gallagher | Software Engineer`,
   description:
     'Jessica Gallagher is a Brooklyn, New York-based full stack software engineer with a passion for creating user-friendly, engaging, and intuitive experiences using Next.js, Tailwind CSS, Supabase, and Prismic CMS.',
   keywords: [
@@ -138,7 +138,7 @@ export const metadata = {
     'javascript',
     'freelance',
     'freelancer',
-    'vercel'
+    'vercel',
   ],
   authors: [
     { name: 'Jessica Gallagher', url: 'https://www.jessicagallagher.com' },
