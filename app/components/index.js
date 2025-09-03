@@ -7,6 +7,7 @@ import LandingPage from './LandingPage';
 import Loading from './Loading';
 import NavBar from './NavBar';
 import NoRightClick from './NoRightClick';
+import NotFound from './NotFound';
 import PortfolioPage from './PortfolioPage';
 import TwinklingStars from './TwinklingStars';
 import Typewriter from './Typewriter';
@@ -21,6 +22,7 @@ export {
   Loading,
   NavBar,
   NoRightClick,
+  NotFound,
   PortfolioPage,
   TwinklingStars,
   Typewriter
