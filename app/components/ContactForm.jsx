@@ -1,5 +1,6 @@
 'use client';
 import { useState, useRef } from 'react';
+import { track } from '@vercel/analytics/';
 import ReCAPTCHA from 'react-google-recaptcha';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -221,7 +222,9 @@ export default function ContactForm() {
           </div>
           {!clicked && (
             <div>
-              <Button buttonText={`Submit`} type={`submit`}/>
+              <Button buttonText={`Submit`} type={`submit`} onClick={() => {
+                track('contact form submit button clicked')
+              }}/>
             </div>
           )}
           {clicked && (

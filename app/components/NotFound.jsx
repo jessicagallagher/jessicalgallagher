@@ -1,7 +1,7 @@
 'use client';
 import { useRouter } from 'next/navigation';
+import { track } from '@vercel/analytics'
 import { Button } from '.';
-// import { track } from '@vercel/analytics';
 
 export default function NotFound() {
   const router = useRouter();
@@ -21,7 +21,7 @@ export default function NotFound() {
             buttonText={`Back`}
             onClick={() => {
               router.back();
-              // track('not found page');
+              track('not found page back button clicked');
             }}
           />
         </div>

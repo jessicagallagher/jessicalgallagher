@@ -1,5 +1,6 @@
 'use client';
 import { useState, useEffect, useRef } from 'react';
+import { track } from '@vercel/analytics'
 import { Disclosure, Menu, Transition } from '@headlessui/react';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/20/solid';
 import Link from 'next/link';
@@ -33,6 +34,9 @@ export default function NavBar() {
                   pathname === '/' ? 'underline' : 'hover:underline'
                 }`}
                 href='/'
+                onClick={() => {
+                  track('mobile nav home page link clicked');
+                }}
               >
                 Home
               </Link>
@@ -42,6 +46,9 @@ export default function NavBar() {
                   pathname === '/about' ? 'underline' : 'hover:underline'
                 }`}
                 href='/about'
+                onClick={() => {
+                  track('mobile nav about page link clicked');
+                }}
               >
                 About
               </Link>
@@ -50,6 +57,9 @@ export default function NavBar() {
                   pathname === '/portfolio' ? 'underline' : 'hover:underline'
                 }`}
                 href='/portfolio'
+                onClick={() => {
+                  track('mobile nav portfolio page link clicked');
+                }}
               >
                 Portfolio
               </Link>
@@ -58,18 +68,27 @@ export default function NavBar() {
                   pathname === '/contact' ? 'underline' : 'hover:underline'
                 }`}
                 href='/contact'
+                onClick={() => {
+                  track('mobile nav contact page link clicked');
+                }}
               >
                 Contact
               </Link>
               <a
                 className='hover:underline'
                 href='https://github.com/jessicagallagher'
+                onClick={() => {
+                  track('mobile nav github link clicked');
+                }}
               >
                 GitHub
               </a>
               <a
                 className='hover:underline'
                 href='https://www.linkedin.com/in/jessica-gallagher/'
+                onClick={() => {
+                  track('mobile nav linkedin link clicked');
+                }}
               >
                 LinkedIn
               </a>
@@ -84,6 +103,9 @@ export default function NavBar() {
                     pathname === '/' ? 'underline' : 'hover:underline'
                   }`}
                   href='/'
+                  onClick={() => {
+                    track('nav home page link clicked');
+                  }}
                 >
                   Home
                 </Link>
@@ -92,6 +114,9 @@ export default function NavBar() {
                     pathname === '/about' ? 'underline' : 'hover:underline'
                   }`}
                   href='/about'
+                  onClick={() => {
+                    track('nav about page link clicked');
+                  }}
                 >
                   About
                 </Link>
@@ -100,6 +125,9 @@ export default function NavBar() {
                     pathname === '/portfolio' ? 'underline' : 'hover:underline'
                   }`}
                   href='/portfolio'
+                  onClick={() => {
+                    track('nav portfolio page link clicked');
+                  }}
                 >
                   Portfolio
                 </Link>
@@ -108,6 +136,9 @@ export default function NavBar() {
                     pathname === '/contact' ? 'underline' : 'hover:underline'
                   }`}
                   href='/contact'
+                  onClick={() => {
+                    track('nav contact page link clicked');
+                  }}
                 >
                   Contact
                 </Link>
@@ -119,6 +150,9 @@ export default function NavBar() {
                   href='https://github.com/jessicagallagher'
                   target='_blank'
                   rel='noopener'
+                  onClick={() => {
+                    track('nav github icon link clicked');
+                  }}
                 >
                   <div className='h-6 w-6'>
                     <svg fill='#eeeeee' viewBox='0 0 24 24'>
@@ -131,6 +165,9 @@ export default function NavBar() {
                   href='https://www.linkedin.com/in/jessica-gallagher/'
                   target='_blank'
                   rel='noopener'
+                  onClick={() => {
+                    track('nav linkedin icon link clicked');
+                  }}
                 >
                   <div className='h-6 w-6'>
                     <svg fill='#eeeeee' viewBox='0 0 24 24'>

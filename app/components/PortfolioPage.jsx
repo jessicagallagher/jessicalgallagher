@@ -1,6 +1,7 @@
 'use client';
 import { XMarkIcon } from '@heroicons/react/20/solid';
 import { useState } from 'react';
+import { track } from '@vercel/analytics'
 import { NavBar, Typewriter } from '.';
 import { projects, funProjects } from '.././utils/portfolio';
 
@@ -41,12 +42,14 @@ export default function PortfolioPage() {
                       className='rounded-lg object-cover w-1/2 h-full border border-white mx-auto cursor-pointer'
                       src={project.imgUrl}
                       alt={`Screenshot of project: ${project.name}`}
-                      onClick={() => openModal(project)}
+                      onClick={() => { openModal(project); track(`${project.name} image clicked`); }}
                     />
                   </div>
                   <div className='space-y-2'>
                     <div className='space-y-1 font-semibold leading-6 text-center'>
-                      <a href={project.link} target='_blank' rel='noopener'>
+                      <a href={project.link} target='_blank' rel='noopener' onClick={() => {
+                          track(`${project.name} link to project clicked`)
+                        }}>
                         <button
                           disabled={project.isDisabled}
                           className={`${
@@ -81,7 +84,7 @@ export default function PortfolioPage() {
                       className='rounded-lg object-cover w-1/2 h-full border border-white mx-auto cursor-pointer'
                       src={project.imgUrl}
                       alt={`Screenshot of project: ${project.name}`}
-                      onClick={() => openModal(project)}
+                      onClick={() => { openModal(project); track(`${project.name} image clicked`); }}
                     />
                   </div>
                   <div className='space-y-2'>
@@ -95,6 +98,9 @@ export default function PortfolioPage() {
                         }`}
                         target='_blank'
                         rel='noopener'
+                        onClick={() => {
+                          track(`${project.name} link to project clicked`)
+                        }}
                       >
                         <button className='text-lg md:text-xl hover:underline'>
                           {project.name}

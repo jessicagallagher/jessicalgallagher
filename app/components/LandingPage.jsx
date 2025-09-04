@@ -1,5 +1,6 @@
 'use client'
 import Link from 'next/link';
+import { track } from '@vercel/analytics/';
 import { Button } from '.';
 
 export default function LandingPage() {
@@ -17,6 +18,9 @@ export default function LandingPage() {
                 href='https://github.com/jessicagallagher'
                 target='_blank'
                 rel='noopener'
+                onClick={() => {
+                  track('github link clicked');
+                }}
               >
                 <div className='h-8 w-8 mt-6'>
                   <svg fill='#eeeeee' viewBox='0 0 24 24'>
@@ -29,6 +33,9 @@ export default function LandingPage() {
                 href='https://www.linkedin.com/in/jessica-gallagher/'
                 target='_blank'
                 rel='noopener'
+                onClick={() => {
+                  track('linkedin link clicked');
+                }}
               >
                 <div className='h-8 w-8 mt-6'>
                   <svg fill='#eeeeee' viewBox='0 0 24 24'>
@@ -47,13 +54,28 @@ export default function LandingPage() {
         </div>
         <div className='flex items-center gap-x-6 mt-10 justify-center'>
           <Link href='/about'>
-            <Button buttonText={`About`} />
+            <Button
+              buttonText={`About`}
+              onClick={() => {
+                track('about link clicked from landing page');
+              }}
+            />
           </Link>
           <Link href='/portfolio'>
-            <Button buttonText={`Portfolio`} />
+            <Button
+              buttonText={`Portfolio`}
+              onClick={() => {
+                track('portfolio link clicked from landing page');
+              }}
+            />
           </Link>
           <Link href='/contact'>
-            <Button buttonText={`Contact`} />
+            <Button
+              buttonText={`Contact`}
+              onClick={() => {
+                track('contact link clicked from landing page');
+              }}
+            />
           </Link>
         </div>
       </div>
