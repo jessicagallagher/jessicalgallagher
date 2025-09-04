@@ -18,7 +18,7 @@ export const projects = [
     name: 'Petsitting Application',
     imgUrl: '/images/portfolio_images/petsitting.png',
     techUsed: 'Next.js, Tailwind CSS, Supabase, Prismic CMS + Mapbox',
-    link: '#',
+    isDisabled: true,
     comments: `This application was built and is maintained for a private client and can't be accessed by the public.`,
   },
   {
@@ -32,7 +32,7 @@ export const projects = [
     name: 'Database Application',
     imgUrl: '/images/portfolio_images/database-management-system.gif',
     techUsed: 'React, Bootstrap, MongoDB, Express, Prisma ORM, + Nodemailer',
-    link: '#',
+    isDisabled: true,
     comments: `This application was built and is maintained for a private client and can't be accessed by the public.`,
   },
 ];

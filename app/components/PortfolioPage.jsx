@@ -1,5 +1,5 @@
-'use client'
-import { NavBar, Typewriter } from '.'
+'use client';
+import { NavBar, Typewriter } from '.';
 import { projects, funProjects } from '.././utils/portfolio';
 
 export default function PortfolioPage() {
@@ -24,17 +24,19 @@ export default function PortfolioPage() {
                     <div className='space-y-1 font-semibold leading-6 text-center'>
                       <a
                         href={project.link}
-                        className={`${
-                          project.link === '#'
-                            ? 'cursor-not-allowed'
-                            : 'cursor-pointer'
-                        }`}
                         target='_blank'
                         rel='noopener'
                       >
-                        <h3 className='text-lg md:text-xl hover:text-4xl'>
+                        <button
+                          disabled={project.isDisabled}
+                          className={`${
+                            project.isDisabled
+                              ? 'cursor-not-allowed'
+                              : 'cursor-pointer hover:underline'
+                          } text-lg md:text-xl `}
+                        >
                           {project.name}
-                        </h3>
+                        </button>
                       </a>
                       <p className='font-semibold'>
                         Built with {project.techUsed}
@@ -47,7 +49,10 @@ export default function PortfolioPage() {
             ))}
           </ul>
           <Typewriter text='Just for Fun' delay={100} />
-          <ul role='list' className='flex flex-col space-y-12 justify-center'>
+          <ul
+            role='list'
+            className='flex flex-col space-y-12 justify-center pb-10'
+          >
             {funProjects.map((project) => (
               <li key={project.name}>
                 <div className='space-y-4'>
@@ -70,9 +75,9 @@ export default function PortfolioPage() {
                         target='_blank'
                         rel='noopener'
                       >
-                        <h3 className='text-lg md:text-xl hover:text-4xl'>
+                        <button className='text-lg md:text-xl hover:underline'>
                           {project.name}
-                        </h3>
+                        </button>
                       </a>
                       <p className='font-semi-bold'>
                         Built with {project.techUsed}
