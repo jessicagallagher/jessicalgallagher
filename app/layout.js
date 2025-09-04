@@ -158,6 +158,7 @@ export default function RootLayout({ children }) {
           <Analytics />
         </NoRightClick>
       </body>
+      <GoogleAnalytics gaId={process.env.GA_MEASUREMENT_ID} />
     </html>
   );
 }
