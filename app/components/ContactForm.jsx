@@ -1,6 +1,6 @@
 'use client';
 import { useState, useRef } from 'react';
-import { track } from '@vercel/analytics/';
+import { track } from '@vercel/analytics';
 import ReCAPTCHA from 'react-google-recaptcha';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
