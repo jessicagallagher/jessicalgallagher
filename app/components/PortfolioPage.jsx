@@ -42,13 +42,13 @@ export default function PortfolioPage() {
                       className='rounded-lg object-cover w-1/2 h-full border border-white mx-auto cursor-pointer'
                       src={project.imgUrl}
                       alt={`Screenshot of project: ${project.name}`}
-                      onClick={() => openModal(project); track(`${project.name} image clicked`)}
+                      onClick={() => { openModal(project); track(`${project.name} image clicked`); }}
                     />
                   </div>
                   <div className='space-y-2'>
                     <div className='space-y-1 font-semibold leading-6 text-center'>
                       <a href={project.link} target='_blank' rel='noopener' onClick={() => {
-                          track(`${project.name link to project clicked}`)
+                          track(`${project.name} link to project clicked`)
                         }}>
                         <button
                           disabled={project.isDisabled}
@@ -84,7 +84,7 @@ export default function PortfolioPage() {
                       className='rounded-lg object-cover w-1/2 h-full border border-white mx-auto cursor-pointer'
                       src={project.imgUrl}
                       alt={`Screenshot of project: ${project.name}`}
-                      onClick={() => openModal(project); track(`${project.name} image clicked`)}
+                      onClick={() => { openModal(project); track(`${project.name} image clicked`); }}
                     />
                   </div>
                   <div className='space-y-2'>
