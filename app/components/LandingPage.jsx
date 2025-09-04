@@ -1,6 +1,6 @@
 'use client'
 import Link from 'next/link';
-import { track } from '@vercel/analytics/';
+import { track } from '@vercel/analytics';
 import { Button } from '.';
 
 export default function LandingPage() {

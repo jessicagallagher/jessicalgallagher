@@ -2,7 +2,7 @@
 import { useRouter } from 'next/navigation';
 import dynamic from 'next/dynamic';
 import { Button, FluidCursor } from './components';
-// import { track } from '@vercel/analytics';
+import { track } from '@vercel/analytics';
 
 const TwinklingStars = dynamic(() => import('./components/TwinklingStars'), {
   ssr: false,
@@ -24,7 +24,7 @@ export default function GlobalError({ error, reset }) {
               buttonText={`Retry`}
               onClick={() => {
                 router.refresh();
-                // track('global error page');
+                track('global error page');
               }}
             />
           </div>
