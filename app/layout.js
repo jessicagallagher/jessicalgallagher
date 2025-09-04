@@ -151,9 +151,9 @@ export default function RootLayout({ children }) {
   return (
     <html lang='en'>
       <body className='font-lato'>
-        {/* <NoRightClick> */}
+        <NoRightClick>
         {children}
-        {/* </NoRightClick> */}
+        </NoRightClick>
       </body>
     </html>
   );
