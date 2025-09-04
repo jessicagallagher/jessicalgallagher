@@ -1,3 +1,4 @@
+import { Analytics } from '@vercel/analytics/next'
 import './globals.css';
 import { TwinklingStars, NoRightClick } from './components';
 
@@ -152,7 +153,8 @@ export default function RootLayout({ children }) {
     <html lang='en'>
       <body className='font-lato'>
         <NoRightClick>
-        {children}
+          {children}
+          <Analytics />
         </NoRightClick>
       </body>
     </html>
