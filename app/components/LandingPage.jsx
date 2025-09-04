@@ -1,5 +1,6 @@
 'use client'
 import Link from 'next/link';
+import { Button } from '.';
 
 export default function LandingPage() {
   return (
@@ -46,19 +47,13 @@ export default function LandingPage() {
         </div>
         <div className='flex items-center gap-x-6 mt-10 justify-center'>
           <Link href='/about'>
-            <button className='w-[125] border border-white px-6 py-2 rounded-4xl text-xl hover:bg-white hover:text-black hover:cursor-pointer'>
-              About
-            </button>
+            <Button buttonText={`About`} />
           </Link>
-          <Link href='/'>
-            <button className='w-[125] border border-white px-6 py-2 rounded-4xl text-xl hover:bg-white hover:text-black hover:cursor-pointer'>
-              Portfolio
-            </button>
+          <Link href='/portfolio'>
+            <Button buttonText={`Portfolio`} />
           </Link>
-          <Link href='/'>
-            <button className='w-[125] border border-white px-6 py-2 rounded-4xl text-xl hover:bg-white hover:text-black hover:cursor-pointer'>
-              Contact
-            </button>
+          <Link href='/contact'>
+            <Button buttonText={`Contact`} />
           </Link>
         </div>
       </div>

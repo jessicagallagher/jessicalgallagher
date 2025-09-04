@@ -1,7 +1,7 @@
-import { AboutPage } from '../components'
+import { AboutPage, FluidCursor } from '../components'
 
 export default function About() {
   return (
-    <div><AboutPage /></div>
+    <div><AboutPage /><FluidCursor /></div>
   )
 }

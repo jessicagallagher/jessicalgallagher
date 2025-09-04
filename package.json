@@ -1,6 +1,6 @@
 {
   "name": "jessicalgallagher",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
@@ -16,6 +16,10 @@
     "next": "15.3.4",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
+    "react-google-recaptcha": "^3.1.0",
+    "react-spinners": "^0.17.0",
+    "react-toastify": "^11.0.5",
+    "resend": "^6.0.1",
     "tailwind-merge": "^3.3.1"
   },
   "devDependencies": {
