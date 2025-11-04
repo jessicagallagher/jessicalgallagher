@@ -18,6 +18,7 @@ export default function LandingPage() {
                 href='https://github.com/jessicagallagher'
                 target='_blank'
                 rel='noopener'
+                aria-label='Visit GitHub page'
                 onClick={() => {
                   track('github link clicked');
                 }}
@@ -33,6 +34,7 @@ export default function LandingPage() {
                 href='https://www.linkedin.com/in/jessica-gallagher/'
                 target='_blank'
                 rel='noopener'
+                aria-label='Visit LinkedIn page'
                 onClick={() => {
                   track('linkedin link clicked');
                 }}

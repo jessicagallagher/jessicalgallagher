@@ -2,6 +2,7 @@
 import { XMarkIcon } from '@heroicons/react/20/solid';
 import { useState } from 'react';
 import { track } from '@vercel/analytics'
+import Image from 'next/image';
 import { NavBar, Typewriter } from '.';
 import { projects, funProjects } from '.././utils/portfolio';
 
@@ -38,10 +39,13 @@ export default function PortfolioPage() {
               <li key={project.name}>
                 <div className='space-y-4'>
                   <div>
-                    <img
+                    <Image
                       className='rounded-lg object-cover w-1/2 h-full border border-white mx-auto cursor-pointer'
                       src={project.imgUrl}
                       alt={`Screenshot of project: ${project.name}`}
+                      priority={true}
+                      width={500}
+                      height={500}
                       onClick={() => { openModal(project); track(`${project.name} image clicked`); }}
                     />
                   </div>
