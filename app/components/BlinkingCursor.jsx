@@ -16,7 +16,7 @@ export default function BlinkingCursor() {
     <span
       className={`ml-1 ${
         visible ? 'opacity-100' : 'opacity-0'
-      } transition-opacity duration-75 font-typewriter text-6xl`}
+      } transition-opacity duration-75 font-typewriter text-4xl lg:text-6xl`}
     >
       |
     </span>
