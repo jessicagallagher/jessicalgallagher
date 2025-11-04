@@ -49,6 +49,8 @@ export default function LandingPage() {
             <img
               className='rounded-full object-cover outline-1 -outline-offset-1 outline-white'
               src='/images/headshot.png'
+              alt='headshot of jessica gallagher'
+              fetchPriority='high'
             />
           </div>
         </div>

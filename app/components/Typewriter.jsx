@@ -18,7 +18,7 @@ export default function Typewriter({ text, delay }) {
   }, [currentIndex, delay, text]);
 
   return (
-    <h1 className='font-roboto p-2 lg:p-10 text-4xl lg:text-6xl'>
+    <h1 className='font-typewriter p-2 lg:p-10 text-4xl lg:text-6xl'>
       {currentText}
       <span>
         <BlinkingCursor />

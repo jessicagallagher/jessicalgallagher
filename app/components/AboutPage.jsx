@@ -21,7 +21,7 @@ export default function AboutPage() {
             But... I don't just write code all day! I also enjoy reading,
             playing music on the piano, guitar, bass guitar, flute, and piccolo,
             cooking, hanging out with my two cats, Wiz Khatlifa and Max, and
-            running. I'm a 7x marathoner and am looking forward to challenging
+            running. I'm an 8x marathoner and am looking forward to challenging
             myself to run ultra-marathons soon. I'm also a semi-pro napper, with
             a personal best of four naps in one day. As a curious
             lifetime-learner, I'm currently perfecting my Italian.
@@ -37,8 +37,9 @@ export default function AboutPage() {
                 <li>🇩🇪 Berlin Marathon (Berlin, Germany)</li>
                 <li>🇺🇸 Chicago Marathon (Chicago, Illinois)</li>
                 <li>🇨🇦 Longueuil Marathon (Québec, Canada)</li>
-                <li>🇺🇸Philadelphia Marathon (Philadelphia, Pennsylvania)</li>
+                <li>🇺🇸 Philadelphia Marathon (Philadelphia, Pennsylvania)</li>
                 <li>🇬🇧 Brighton Marathon (Brighton, England)</li>
+                <li>🇨🇦 Toronto Waterfront Marathon (Toronto, Canada)</li>
               </ul>
             </div>
             <div>
@@ -77,6 +78,13 @@ export default function AboutPage() {
                     Il Grande Gatsby (Italian Edition)
                   </span>{' '}
                   by F. Scott Fitzgerald
+                </li>
+                <li>
+                  📚{' '}
+                  <span className='italic'>
+                    Confessions of a Forty-Something F**K Up
+                  </span>{' '}
+                  by Alexandra Potter
                 </li>
               </ul>
             </div>
