@@ -77,6 +77,7 @@ export default function NavBar() {
               <a
                 className='hover:underline'
                 href='https://github.com/jessicagallagher'
+                aria-label='Visit GitHub page'
                 onClick={() => {
                   track('mobile nav github link clicked');
                 }}
@@ -86,6 +87,7 @@ export default function NavBar() {
               <a
                 className='hover:underline'
                 href='https://www.linkedin.com/in/jessica-gallagher/'
+                aria-label='Visit LinkedIn page'
                 onClick={() => {
                   track('mobile nav linkedin link clicked');
                 }}
@@ -98,50 +100,60 @@ export default function NavBar() {
           <div className='flex justify-between items-center'>
             <div className='hidden md:ml-6 md:flex md:items-center md:space-x-3 lg:space-x-6 xl:space-x-8 '>
               <ul className='hidden md:ml-6 md:flex md:space-x-3 lg:space-x-6 xl:space-x-8'>
-                <Link
-                  className={`${
-                    pathname === '/' ? 'underline' : 'hover:underline'
-                  }`}
-                  href='/'
-                  onClick={() => {
-                    track('nav home page link clicked');
-                  }}
-                >
-                  Home
-                </Link>
-                <Link
-                  className={`${
-                    pathname === '/about' ? 'underline' : 'hover:underline'
-                  }`}
-                  href='/about'
-                  onClick={() => {
-                    track('nav about page link clicked');
-                  }}
-                >
-                  About
-                </Link>
-                <Link
-                  className={`${
-                    pathname === '/portfolio' ? 'underline' : 'hover:underline'
-                  }`}
-                  href='/portfolio'
-                  onClick={() => {
-                    track('nav portfolio page link clicked');
-                  }}
-                >
-                  Portfolio
-                </Link>
-                <Link
-                  className={`${
-                    pathname === '/contact' ? 'underline' : 'hover:underline'
-                  }`}
-                  href='/contact'
-                  onClick={() => {
-                    track('nav contact page link clicked');
-                  }}
-                >
-                  Contact
-                </Link>
+                <li>
+                  <Link
+                    className={`${
+                      pathname === '/' ? 'underline' : 'hover:underline'
+                    }`}
+                    href='/'
+                    onClick={() => {
+                      track('nav home page link clicked');
+                    }}
+                  >
+                    Home
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    className={`${
+                      pathname === '/about' ? 'underline' : 'hover:underline'
+                    }`}
+                    href='/about'
+                    onClick={() => {
+                      track('nav about page link clicked');
+                    }}
+                  >
+                    About
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    className={`${
+                      pathname === '/portfolio'
+                        ? 'underline'
+                        : 'hover:underline'
+                    }`}
+                    href='/portfolio'
+                    onClick={() => {
+                      track('nav portfolio page link clicked');
+                    }}
+                  >
+                    Portfolio
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    className={`${
+                      pathname === '/contact' ? 'underline' : 'hover:underline'
+                    }`}
+                    href='/contact'
+                    onClick={() => {
+                      track('nav contact page link clicked');
+                    }}
+                  >
+                    Contact
+                  </Link>
+                </li>
               </ul>
             </div>
             <div className='hidden md:mx-6 items-center md:flex md:space-x-3 lg:space-x-6 xl:space-x-8 '>
@@ -150,6 +162,7 @@ export default function NavBar() {
                   href='https://github.com/jessicagallagher'
                   target='_blank'
                   rel='noopener'
+                  aria-label='Visit GitHub page'
                   onClick={() => {
                     track('nav github icon link clicked');
                   }}
@@ -165,6 +178,7 @@ export default function NavBar() {
                   href='https://www.linkedin.com/in/jessica-gallagher/'
                   target='_blank'
                   rel='noopener'
+                  aria-label='Visit LinkedIn page'
                   onClick={() => {
                     track('nav linkedin icon link clicked');
                   }}

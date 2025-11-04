@@ -1,6 +1,7 @@
 import { GoogleAnalytics } from '@next/third-parties/google';
 import { Analytics } from '@vercel/analytics/next';
 import { SpeedInsights } from '@vercel/speed-insights/next'
+import { Lato, Roboto_Mono } from 'next/font/google'
 import './globals.css';
 import { TwinklingStars, NoRightClick } from './components';
 
@@ -150,10 +151,26 @@ export const metadata = {
   publisher: 'Jessica Gallagher',
 };
 
+const lato = Lato({
+  subsets: ['latin'],
+  weight: ['100', '300', '400', '700', '900'],
+  style: ['normal', 'italic'],
+  display: 'swap',
+  variable: '--font-lato'
+});
+
+const roboto = Roboto_Mono({
+  subsets: ['latin'],
+  weight: ['100', '300', '400', '700'],
+  style: ['normal', 'italic'],
+  display: 'swap',
+  variable: '--font-roboto',
+});
+
 export default function RootLayout({ children }) {
   return (
-    <html lang='en'>
-      <body className='font-lato'>
+    <html lang='en' className={`${lato.variable} ${roboto.variable}`}>
+      <body className='font-body'>
         <NoRightClick>
           {children}
           <Analytics />
