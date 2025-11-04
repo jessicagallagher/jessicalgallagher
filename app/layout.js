@@ -1,5 +1,6 @@
 import { GoogleAnalytics } from '@next/third-parties/google';
 import { Analytics } from '@vercel/analytics/next';
+import { SpeedInsights } from '@vercel/speed-insights/next'
 import './globals.css';
 import { TwinklingStars, NoRightClick } from './components';
 
@@ -156,6 +157,7 @@ export default function RootLayout({ children }) {
         <NoRightClick>
           {children}
           <Analytics />
+          <SpeedInsights />
         </NoRightClick>
       </body>
       <GoogleAnalytics gaId={process.env.GA_MEASUREMENT_ID} />
