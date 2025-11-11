@@ -1,4 +1,4 @@
-'use client'
+'use client';
 import Link from 'next/link';
 import { track } from '@vercel/analytics';
 import { Button } from '.';
@@ -6,7 +6,7 @@ import { Button } from '.';
 export default function LandingPage() {
   return (
     <div className='h-screen'>
-      <div className='flex flex-col px-10 relative top-1/4 right-1/2 transform translate-x-1/2'>
+      <div className='flex flex-col px-8 relative top-1/4 right-1/2 transform translate-x-1/2'>
         <div className='mx-auto flex justify-center flex-row items-center'>
           <div>
             <h2 className='text-4xl lg:text-5xl font-semibold tracking-tight text-pretty'>
