@@ -6,14 +6,14 @@ import { Button } from '.';
 export default function LandingPage() {
   return (
     <div className='h-screen'>
-      <div className='flex flex-col px-8 relative top-1/4 right-1/2 transform translate-x-1/2'>
-        <div className='mx-auto flex justify-center flex-row items-center'>
+      <div className='flex flex-col px-8 py-8 sm:py-0 relative sm:top-1/4 right-1/2 transform translate-x-1/2'>
+        <div className='mx-auto flex justify-center flex-col sm:flex-row items-center'>
           <div>
-            <h2 className='text-4xl lg:text-5xl font-semibold tracking-tight text-pretty'>
+            <h2 className='text-4xl lg:text-5xl font-semibold tracking-tight text-pretty text-center sm:text-left'>
               Jessica Gallagher
             </h2>
-            <p className='text-2xl mt-6'>Full Stack Software Engineer</p>
-            <div className='flex justify-start items-center'>
+            <p className='text-2xl mt-6 text-center sm:text-left'>Full Stack Software Engineer</p>
+            <div className='flex justify-center sm:justify-start items-center'>
               <a
                 href='https://github.com/jessicagallagher'
                 target='_blank'
@@ -47,7 +47,7 @@ export default function LandingPage() {
               </a>
             </div>
           </div>
-          <div className='ml-20'>
+          <div className='sm:ml-20 mt-10 sm:mt-0 px-10 sm:px-0'>
             <img
               className='rounded-full object-cover outline-1 -outline-offset-1 outline-white'
               src='/images/headshot.png'
@@ -56,7 +56,7 @@ export default function LandingPage() {
             />
           </div>
         </div>
-        <div className='flex items-center gap-x-6 mt-10 justify-center'>
+        <div className='flex flex-col sm:flex-row items-center gap-x-6 gap-y-4 sm:gap-y-0 mt-10 justify-center'>
           <Link href='/about'>
             <Button
               buttonText={`About`}

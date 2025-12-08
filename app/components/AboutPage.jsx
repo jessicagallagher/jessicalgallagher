@@ -42,7 +42,7 @@ export default function AboutPage() {
                 <li>🇨🇦 Toronto Waterfront Marathon (Toronto, Canada)</li>
               </ul>
             </div>
-            <div>
+            <div className='pb-10 sm:pb-0'>
               <p className='text-lg lg:text-xl text-center lg:text-left mt-10 lg:mt-0'>
                 Books I've read this year:
               </p>
