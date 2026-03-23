@@ -10,7 +10,7 @@ export const projects = [
     name: 'Southpaw Martial Arts and Fitness Club',
     imgUrl: '/images/portfolio_images/southpaw.png',
     techUsed: 'Next.js, Tailwind CSS, + Resend',
-    link: 'https://www.southpawmafc.vercel.app',
+    link: 'https://southpawmafc.vercel.app',
     comments:
       'This website was built and is maintained for Southpaw Martial Arts and Fitness Club.',
   },
