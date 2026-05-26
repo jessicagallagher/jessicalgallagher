@@ -13,18 +13,17 @@ export default function AboutPage() {
             passion for creating user-friendly, engaging, and intuitive
             experiences. I enjoy building websites and web applications that
             solve real-world problems and day-to-day challenges. I work
-            extensively with Next.js, Tailwind CSS, Supabase, and Prismic CMS. I
-            write clean and easy to maintain code.
+            extensively with Next.js, Tailwind CSS, Supabase, MongoDB, and
+            Prismic CMS. I write clean and easy to maintain code.
           </p>
           <br />
           <p className='text-lg lg:text-xl text-justify'>
             But... I don't just write code all day! I also enjoy reading,
             playing music on the piano, guitar, bass guitar, flute, and piccolo,
             cooking, hanging out with my two cats, Wiz Khatlifa and Max, and
-            running. I'm an 8x marathoner and am looking forward to challenging
-            myself to run ultra-marathons soon. I'm also a semi-pro napper, with
-            a personal best of four naps in one day. As a curious
-            lifetime-learner, I'm currently perfecting my Italian.
+            running. I'm a 9x marathoner and a semi-pro napper—with a personal
+            best of four naps in one day. As a curious lifetime-learner, I'm
+            currently perfecting my Italian.
           </p>
           <div className='flex flex-col justify-center lg:grid lg:grid-cols-2 mt-10'>
             <div>
@@ -40,6 +39,7 @@ export default function AboutPage() {
                 <li>🇺🇸 Philadelphia Marathon (Philadelphia, Pennsylvania)</li>
                 <li>🇬🇧 Brighton Marathon (Brighton, England)</li>
                 <li>🇨🇦 Toronto Waterfront Marathon (Toronto, Canada)</li>
+                <li>🇺🇸 Hudson Valley Marathon (Highland, New York)</li>
               </ul>
             </div>
             <div className='pb-10 sm:pb-0'>
@@ -48,22 +48,8 @@ export default function AboutPage() {
               </p>
               <ul className='text-base lg:text-lg list-outside'>
                 <li>
-                  📚 <span className='italic'>Crime and Punishment</span> by
-                  Fyodor Dostoyevsky, Translated by Richard Pevear + Larissa
-                  Volokhonsky
-                </li>
-                <li>
-                  📚 <span className='italic'>The You You Are</span> by Dr.
-                  Ricken Lazlo Hale, PhD (Any{' '}
-                  <span className='italic'>Severance</span> fans out there?)
-                </li>
-                <li>
-                  📚 <span className='italic'>Kafka on the Shore</span> by
-                  Haruki Murakami
-                </li>
-                <li>
-                  📚 <span className='italic'>The Power Broker</span> by Robert
-                  A. Caro
+                  📚 <span className='italic'>Norwegian Wood</span> by Haruki
+                  Murakami
                 </li>
                 <li>
                   📚{' '}
@@ -73,18 +59,23 @@ export default function AboutPage() {
                   by John Ousterhout
                 </li>
                 <li>
-                  📚{' '}
-                  <span className='italic'>
-                    Il Grande Gatsby (Italian Edition)
-                  </span>{' '}
-                  by F. Scott Fitzgerald
+                  📚 <span className='italic'>Battle Royale</span> by Koushun
+                  Takami
                 </li>
                 <li>
                   📚{' '}
                   <span className='italic'>
-                    Confessions of a Forty-Something F**K Up
+                    Algospeak: How Social Media Is Transforming the Future of
+                    Language
                   </span>{' '}
-                  by Alexandra Potter
+                  by Adam Aleksic
+                </li>
+                <li>
+                  📚{' '}
+                  <span className='italic'>
+                    Even the Good Girls Will Cry: A '90s Rock Memoir'
+                  </span>{' '}
+                  by Melissa Auf der Maur
                 </li>
               </ul>
             </div>
