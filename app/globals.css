@@ -1,8 +1,8 @@
 @import "tailwindcss";
 
 @theme inline {
- --font-body: var(--font-lato);
- --font-typewriter: var(--font-roboto);
+  --font-body: var(--font-lato), sans-serif;
+  --font-typewriter: var(--font-roboto), monospace;
 }
 
 body {

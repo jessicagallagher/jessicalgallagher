@@ -1,5 +1,6 @@
 'use client';
 import Link from 'next/link';
+import Image from 'next/image';
 import { track } from '@vercel/analytics';
 import { Button } from '.';
 
@@ -12,7 +13,9 @@ export default function LandingPage() {
             <h2 className='text-4xl lg:text-5xl font-semibold tracking-tight text-pretty text-center sm:text-left'>
               Jessica Gallagher
             </h2>
-            <p className='text-2xl mt-6 text-center sm:text-left'>Full Stack Software Engineer</p>
+            <p className='text-2xl mt-6 text-center sm:text-left'>
+              Full Stack Software Engineer
+            </p>
             <div className='flex justify-center sm:justify-start items-center'>
               <a
                 href='https://github.com/jessicagallagher'
@@ -48,11 +51,13 @@ export default function LandingPage() {
             </div>
           </div>
           <div className='sm:ml-20 mt-10 sm:mt-0 px-10 sm:px-0'>
-            <img
-              className='rounded-full object-cover outline-1 -outline-offset-1 outline-white'
+            <Image
+              className='rounded-full object-cover outline-1 -outline-offset-1 outline-white h-auto max-w-full'
               src='/images/headshot.png'
-              alt='headshot of jessica gallagher'
-              fetchPriority='high'
+              alt='Headshot of Jessica Gallagher'
+              width={316}
+              height={320}
+              priority
             />
           </div>
         </div>

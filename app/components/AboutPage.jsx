@@ -13,23 +13,25 @@ export default function AboutPage() {
             passion for creating user-friendly, engaging, and intuitive
             experiences. I enjoy building websites and web applications that
             solve real-world problems and day-to-day challenges. I work
-            extensively with Next.js, Tailwind CSS, Supabase, MongoDB, and
-            Prismic CMS. I write clean and easy to maintain code.
+            extensively with Next.js, Tailwind CSS, Supabase, MongoDB,
+            Contentful CMS, and Prismic CMS. I write clean and easy to maintain
+            code.
           </p>
           <br />
           <p className='text-lg lg:text-xl text-justify'>
             But... I don't just write code all day! I also enjoy reading,
-            playing music on the piano, guitar, bass guitar, flute, and piccolo,
-            cooking, hanging out with my two cats, Wiz Khatlifa and Max, and
-            running. I'm a 9x marathoner and a semi-pro napper—with a personal
-            best of four naps in one day. As a curious lifetime-learner, I'm
-            currently perfecting my Italian.
+            playing music, knitting, playing videogames, hanging out with my two cats, Wiz
+            Khatlifa and Max, and running. I'm a 10x marathoner, 2x
+            ultramarathoner, and semi-pro napper—with a personal best of four
+            naps in one day. As a curious lifetime-learner, I'm currently
+            perfecting my Italian.
           </p>
           <div className='flex flex-col justify-center lg:grid lg:grid-cols-2 mt-10'>
             <div>
               <p className='text-lg lg:text-xl text-center lg:text-left'>
                 Marathons I've run:
               </p>
+              <br />
               <ul className='text-base lg:text-lg list-outside'>
                 <li>🇺🇸 New York City Marathon (New York, New York)</li>
                 <li>🇺🇸 Big Sur Marathon (Big Sur, California)</li>
@@ -40,12 +42,14 @@ export default function AboutPage() {
                 <li>🇬🇧 Brighton Marathon (Brighton, England)</li>
                 <li>🇨🇦 Toronto Waterfront Marathon (Toronto, Canada)</li>
                 <li>🇺🇸 Hudson Valley Marathon (Highland, New York)</li>
+                <li>🇳🇱 Amsterdam Marathon (Amsterdam, Netherlands)</li>
               </ul>
             </div>
             <div className='pb-10 sm:pb-0'>
               <p className='text-lg lg:text-xl text-center lg:text-left mt-10 lg:mt-0'>
                 Books I've read this year:
               </p>
+              <br />
               <ul className='text-base lg:text-lg list-outside'>
                 <li>
                   📚 <span className='italic'>Norwegian Wood</span> by Haruki
@@ -76,6 +80,13 @@ export default function AboutPage() {
                     Even the Good Girls Will Cry: A '90s Rock Memoir'
                   </span>{' '}
                   by Melissa Auf der Maur
+                </li>
+                <li>
+                  📚 <span className='italic'>Fahrenheit-182</span> by Mark
+                  Hoppus
+                </li>
+                <li>
+                  📚 <span className='italic'>Welcome to Your Life</span> by Roland Orzabal
                 </li>
               </ul>
             </div>
