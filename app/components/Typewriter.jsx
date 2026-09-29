@@ -2,7 +2,7 @@
 import { useState, useEffect } from 'react';
 import { BlinkingCursor } from '.';
 
-export default function Typewriter({ text, delay }) {
+export default function Typewriter({ text, delay, className = 'p-2 lg:p-10' }) {
   const [currentText, setCurrentText] = useState('');
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -18,7 +18,7 @@ export default function Typewriter({ text, delay }) {
   }, [currentIndex, delay, text]);
 
   return (
-    <h1 className='font-typewriter p-2 lg:p-10 text-4xl lg:text-6xl'>
+    <h1 className={`font-typewriter text-4xl lg:text-6xl ${className}`}>
       {currentText}
       <span>
         <BlinkingCursor />
